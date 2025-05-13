@@ -39,6 +39,27 @@ You can tweak detection settings, crop areas, number of problems, etc.
 
 ## 📁 Output Example
 
+⚒️ Current Status
+✅ Dataset scraping works
+
+🔄 Working on integrating route filtering + ML predictions
+
+📡 Bluetooth support planned (MoonBoard 2016 only)
+
+🙏 Credit
+This repo builds on code from:
+
+Alessandro Avi's MoonBoard Dataset Scraper
+Massive credit for the OpenCV + OCR pipeline idea and implementation.
+
+✍️ Author
+Imaad Fahimuddin
+Climber + dev exploring route generation and LED control for MoonBoard 2016 setups.
+
+📝 License
+This repo is for educational and personal use only.
+Please respect MoonBoard’s original data restrictions.
+
 The script saves a JSON file that looks like:
 
 ```json
