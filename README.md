@@ -72,3 +72,5 @@ Climber + dev exploring route generation and LED control for MoonBoard 2016 setu
 
 ## 📝 License
 This repo is for educational and personal use only. Please respect MoonBoard’s original data restrictions.
+
+---
