@@ -39,19 +39,6 @@ You can tweak detection settings, crop areas, number of problems, etc.
 
 ## 📁 Output Example
 
-```json
-{
-  "problem_id": 1,
-  "name": "Benchpress",
-  "grade": "6C",
-  "holds": [
-    { "position": "G5", "type": "start" },
-    { "position": "E7", "type": "middle" },
-    { "position": "D9", "type": "top" }
-  ],
-  "benchmark": true
-}
-
 ⚒️ Current Status
 ✅ Dataset scraping works
 
