@@ -54,24 +54,24 @@ The script saves a JSON file that looks like:
   "benchmark": true
 }
 
-## ⚒️ Current Status
+⚒️ Current Status
 ✅ Dataset scraping works
 
 🔄 Working on integrating route filtering + ML predictions
 
 📡 Bluetooth support planned (MoonBoard 2016 only)
 
-## 🙏 Credit
+🙏 Credit
 This repo builds on code from:
 
 Alessandro Avi's MoonBoard Dataset Scraper
 Massive credit for the OpenCV + OCR pipeline idea and implementation.
 
-## ✍️ Author
+✍️ Author
 Imaad Fahimuddin
 Climber + dev exploring route generation and LED control for MoonBoard 2016 setups.
 
-## 📝 License
+📝 License
 This repo is for educational and personal use only.
 Please respect MoonBoard’s original data restrictions.
 
