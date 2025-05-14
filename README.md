@@ -1,77 +1,76 @@
-# 🧗‍♂️ MoonBoard 2016 Route Companion (WIP)
+# 🧗‍♂️ MoonBoard 2016 Route Recommender & Generator (WIP)
 
-This project is a customized version of [Alessandro Avi's MoonBoard dataset extractor](https://github.com/AlessandroAvi/Moonboard_Dataset), adapted and extended for my own personal project: building a MoonBoard 2016 route companion app that improves route selection, filtering, and Bluetooth LED control.
-
----
-
-## 🚀 What I'm Building
-
-I'm using this codebase to:
-- 🧠 Build a filtered dataset of MoonBoard problems by grade, hold color, and more
-- 🤖 Experiment with route prediction using input holds
-- 📱 Lay the groundwork for a custom mobile/web app that connects to my gym's 2016 MoonBoard
-- 🔗 Eventually interface with Bluetooth to control the LED wall directly (future goal)
+A personalized training companion for the MoonBoard 2016 setup — combining machine learning, custom route filtering, and future Bluetooth LED integration.
 
 ---
 
-## 🔍 What This Code Does (as of now)
+## 🚀 Project Overview
 
-This repo uses **OpenCV and OCR** to:
-- Read MoonBoard problems from screenshots (taken via Android emulator)
-- Detect red, green, and blue holds by color masks
-- Use circle detection to find the holds' (x, y) coordinates
-- Match those to the MoonBoard grid
-- Extract problem name and grade
-- Store all info in a JSON file
+This project started as a modification of [Alessandro Avi's dataset extractor](https://github.com/AlessandroAvi/Moonboard_Dataset), and has grown into a full-stack app that helps climbers:
 
----
-
-## 🛠️ Setup Instructions
-
-1. 📲 Install an Android emulator (e.g. BlueStacks)
-2. 🧱 Open the MoonBoard app inside the emulator
-3. 🖥️ Adjust screen region settings in the script to fit your monitor
-4. 🎯 Run the script to scrape problems and create your local dataset
-
-You can tweak detection settings, crop areas, number of problems, etc.
+- 🔍 Find problems that match their preferred holds and difficulty
+- 🧠 Use ML to recommend routes based on real MoonBoard data
+- 🧪 (Coming soon) Generate entirely new climbs based on learned patterns
+- 📱 Build an intuitive interface for mobile or web interaction
+- 🔗 (Planned) Control the MoonBoard LEDs via Bluetooth
 
 ---
 
-## 📁 Output Example
+## 🧠 Machine Learning Highlights
 
-⚒️ Current Status
-✅ Dataset scraping works
+- Cleaned and structured 1,200+ MoonBoard problems from JSON
+- Extracted start, middle, and end holds to build per-route vectors
+- Created one-hot encoded binary matrices for route representation
+- Built a cosine similarity–based recommender system to return top 5 routes based on user-selected holds and grade
+- Enabled grade filtering and style-aware problem matching
 
-🔄 Working on integrating route filtering + ML predictions
+---
 
-📡 Bluetooth support planned (MoonBoard 2016 only)
+## 💡 Key Features (so far)
 
-🙏 Credit
-This repo builds on code from:
+| Feature              | Status     |
+|----------------------|------------|
+| 🧹 Dataset cleaned & parsed        | ✅ Complete |
+| 🧠 ML route recommender            | 🔄 In progress |
+| 🎛️ Grade + hold filters           | ✅ Complete |
+| 🧗 Route generator (WIP)          | 🔄 In progress |
+| 📱 Flutter frontend                | 🔄 Planned |
+| 📡 Bluetooth LED integration       | 🔄 Planned |
 
-Alessandro Avi's MoonBoard Dataset Scraper
-Massive credit for the OpenCV + OCR pipeline idea and implementation.
+---
+
+## 🛠️ Getting Started
+
+Clone the repo and open the main Jupyter notebook:
+
+```bash
+git clone https://github.com/Daami30330/MoonBoardRecommender.git
+cd MoonBoardRecommender
+
+
+Install dependencies:
+
+pip install -r requirements.txt
+Open moonboard_analysis.ipynb to explore the dataset and test the recommender.
+
+📁 Example Output
+
+{
+  "Name": "TIRITI",
+  "Grade": "6C",
+  "StartHolds": ["1J"],
+  "EndHolds": ["16F"],
+  "MiddleHolds": ["6H", "2G", "10B", "7G"]
+}
 
 ✍️ Author
 Imaad Fahimuddin
-Climber + dev exploring route generation and LED control for MoonBoard 2016 setups.
+CS Grad • Climber • Builder of cool tools that make training better.
+
+🙏 Acknowledgments
+This project extends the work of:
+
+Alessandro Avi's MoonBoard dataset scraper
 
 📝 License
-This repo is for educational and personal use only.
-Please respect MoonBoard’s original data restrictions.
-
-The script saves a JSON file that looks like:
-
-```json
-{
-  "problem_id": 1,
-  "name": "Benchpress",
-  "grade": "6C",
-  "holds": [
-    { "position": "G5", "type": "start" },
-    { "position": "E7", "type": "middle" },
-    { "position": "D9", "type": "top" }
-  ],
-  "benchmark": true
-}
-
+This project is for educational and personal use only. Please respect MoonBoard’s content ownership and usage guidelines.
