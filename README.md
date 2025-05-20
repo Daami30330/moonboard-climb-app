@@ -39,7 +39,7 @@ This project has grown into a full-stack app that helps climbers:
 
 ---
 
-## 🛠Getting Started
+## Getting Started
 
 Clone the repo and open the main Jupyter notebook:
 
