@@ -13,8 +13,14 @@ This project has grown into a full-stack app that helps climbers:
 - (Coming soon) Generate entirely new climbs based on learned patterns
 - Build an intuitive interface for mobile or web interaction
 - (Planned) Control the MoonBoard LEDs via Bluetooth
-
+  
 ---
+## MoonBoard 2016 Wall Setup
+
+<img src="Img/Screenshot 2025-05-19 224054.png" alt="MoonBoard 2016 Wall" width="400"/>
+
+This is the official MoonBoard 2016 hold layout used for problem parsing and hold mapping.
+
 
 ##  Machine Learning Highlights
 
